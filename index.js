@@ -1,15 +1,17 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
 
-function generateREADME ({title, badge, description, installation, usage, credits, license, features, contributing, tests, github, email}) {
+function generateREADME ({title, description, installation, usage, credits, license, features, contributing, tests, github, email}) {
+     
+    const myBadge = myLicense(license);
 
-    const licenseBadge = MyLicense(badge)
 
-    console.log(MyLicense(badge));
+
 
     return `# ${title}
 
-    ${licenseBadge}
+${myBadge}
+
 ## Description
     
     ${description}
@@ -63,21 +65,21 @@ function generateREADME ({title, badge, description, installation, usage, credit
     
 }
 
-function MyLicense(license) {
-    console.log(license);
+function myLicense(license) {
+    console.log("ismylicence", license);
    let badge = '';
 
    switch (license) {
     case 'MIT':
-      badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+      badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]';
       break;
     case 'ISC':
-      badge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+      badge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]';
       break;
     case 'none':
         break;
         case 'Mozilla Public License 2.0':
-      badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
+      badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]';
       break;
   }
   return badge
@@ -144,7 +146,6 @@ inquirer
         },
     ])
     .then((data) => {
-        MyLicense(data.license)
         const myReadme = generateREADME(data);
         console.log(myReadme);
         fs.writeFile('README.md', myReadme, (err) =>

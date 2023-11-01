@@ -1,9 +1,10 @@
-# README-Generartor
+# README-generator
 
-    
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+
 ## Description
     
-    This application is meant to generate a quality and aprofessional README for the user
+    create a readme file
 
 ## Table of Contents
     
@@ -18,15 +19,15 @@
     
 ## Installation
     
-    N/A
+    n/a
 
  ## Usage
 
-    User will be able to enter there answers from the README questions through the terminal, and once all of the questions are answer the application will generate a README file for the user
+    generates README dile base on user input
 
 ## Credits
 
-    N/A
+    n/a
     
 ## License
 
@@ -34,20 +35,20 @@
     
 ## Features
 
-    N/A
+    n/a
     
 ## Contribute
 
-    N/A
+    n/a
     
 ## Tests
 
-    N/A
+    n/a
 
 ## Questions
 
     https://github.com/Cyang0590
 
-    You can also reach me through my email at  for any questions.
+    You can also reach me through my email at yangchai2450@gmail.com for any questions.
 
     
